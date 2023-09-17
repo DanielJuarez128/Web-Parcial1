@@ -1,6 +1,7 @@
 @forward 'theme';
 @forward 'variables';
 
+ /*Seccion 1, cartas de item*/
 #what-can-you-see {
     @include cartas;
     font-family: $item-font; 
