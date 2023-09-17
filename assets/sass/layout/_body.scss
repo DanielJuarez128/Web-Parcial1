@@ -1,1 +1,42 @@
 @forward 'theme';
+@forward 'variables';
+
+#what-can-you-see {
+    @include cartas;
+    font-family: $item-font; 
+    line-height: 1.8;
+    background-color: #23374D;
+    color: #e5e5e5;
+    width: 100%;
+    max-width: 180rem;
+    margin: 0 auto;
+    h3{
+        font-weight: 300;
+        text-align: center;
+        color: #e5e5e5;
+        font-size: 48px;
+        font-family: $title-font;
+    }
+    .cards-container{
+        background-color: #23374D;
+        height: 100%;
+    
+        article{
+            background-color: #182634;
+            margin: 1%;
+            height: 25%;
+            width: 30%;
+            border-radius: 1rem;
+            display:inline-flex ;
+            img{
+                width: 50%;
+            }
+        }
+        h4{
+            display: none;
+        } 
+        p{
+            display: none;
+        }
+    }
+}
