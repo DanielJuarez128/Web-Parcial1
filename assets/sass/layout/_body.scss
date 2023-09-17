@@ -89,4 +89,18 @@
             }
         }
     }
+    @media screen and (max-width:768px) {
+        .cards-container{
+            display: flex; /* Activa el modelo de flexbox para los artículos */
+            flex-wrap: wrap; /* Permite que los artículos se envuelvan en filas si no caben en una sola fila */
+            justify-content: space-between; /* Espacia las columnas de manera uniforme */
+          
+        }
+        article {
+            flex: 0 0 calc(48% - 10px); /* Divide en dos columnas, con 10px de espacio entre ellas */
+            margin-bottom: 20px; /* Espaciado entre los artículos */
+            /* Otros estilos para los artículos según sea necesario */
+          }   
+    }
+
 }
