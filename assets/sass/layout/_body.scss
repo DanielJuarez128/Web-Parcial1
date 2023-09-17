@@ -3,49 +3,44 @@
 @use '../base/mixins' as m;
 
  /*Seccion 1, cartas de item*/
-#what-can-you-see {
-    @include cartas;
-    font-family: $item-font; 
-    line-height: 1.8;
-    background-color: $primary-color;
-    color: $text-color;
-    width: 100%;
+ #what-can-you-see {
+    font-family: t.$item-font; 
+    line-height: t.$base-spacing;
+    background-color: t.$primary-color;
+    color: t.$primary-color;
     max-width: 180rem;
     margin: 0 auto;
+    text-align: center;
     h3{
         font-weight: 300;
         text-align: center;
-        color: $text-color;
+        color: t.$text-color;
         font-size: 48px;
-        font-family: $title-font;
+        font-family: t.$title-font;
+        
     }
     .cards-container{
-        background-color: $primary-color;
-        height: 100%;
+        background-color: t.$primary-color;
     
         article{
-            background-color: $primary-color-dark;
-            margin: 1%;
-            height: 25%;
-            width: 30%;
+            @include m.cartas_sec1;
+            background-color: t.$primary-color-dark;
             border-radius: 0.5rem;
             display:inline-flex ;
+            justify-content: space-between;
             img{
-                width: 50%;
+                width: 45%;
             }
         }
-        h4{
-            display: none;
-        } 
-        p{
+        .info{
+            visibility: hidden;
             display: none;
         }
     }
     article:hover{
-        @include cartas;
-        background-color: $text-color;
-        width: 30%;
-        border-radius: 0rem 2rem;
+        @include m.cartas_sec1;
+        background-color: t.$text-color;
+        border-radius: 0rem 0.5rem;
         position: relative;
 
         figure{
@@ -53,34 +48,34 @@
         }
         
         img{
-            width: 3rem;
+            width: 2rem;
             position: absolute;
             top: 1rem; left: 5%;
         }
         .info{
             margin: 0;
             padding: 0;
-            text-align: start;
+            text-align: justify;
             display: block;
             width: 100%;
             align-items: start;
             h4{
-                color: $primary-color-dark;
+                color: t.$primary-color-dark;
                 text-align: center;
-                font-size: $font-size;
+                font-size: t.$font-size;
                 visibility: visible;
                 display: block;
                 position: sticky;
                 position: relative;
-                top: -0.5rem;
+                top: 0rem;
             }
             p{
                 
                 text-align: start;
                 margin-top: 2rem;
-                color: $primary-color-dark;
+                color: t.$primary-color-dark;
                 text-align: justify;
-                font-size: $font-size;
+                font-size: t.$font-size;
                 visibility: visible;
                 width: 100%;
                 display: inline;
@@ -89,6 +84,7 @@
             }
         }
     }
+
     @media screen and (max-width:768px) {
         .cards-container{
             display: flex; /* Activa el modelo de flexbox para los artículos */
@@ -111,5 +107,4 @@
             padding: 10px;
         }        
     }
-
 }
