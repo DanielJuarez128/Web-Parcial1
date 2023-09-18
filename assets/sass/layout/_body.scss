@@ -114,11 +114,11 @@
         }        
     }
 }
-//parte daniel 
+
 .cards-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 20px; /* Espacio entre las imágenes */
+    gap: 0; /* Elimina el espacio entre las imágenes */
   }
   
   .article {
@@ -148,3 +148,4 @@
   .article:hover span {
     display: block;
   }
+
