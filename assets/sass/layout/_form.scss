@@ -4,6 +4,9 @@
     @include b.lbackground();
     @include b.flexbox($direction: column, $gap: b.$base-spacing);
     width: 100%;
+    
+    padding: 20px;
+
     h3{
         
         color: b.$text-color;
@@ -13,6 +16,7 @@
     form{   
         background-color: b.$primary-color-dark;
 
+
         width: 50%;
         border-radius: b.$base-spacing;
         div{
@@ -21,14 +25,28 @@
             label{
                 font-family: b.$item-font;
                 color: b.$text-color;
+                
             }
-            textarea{
+            input{
+                width: 60%;
+                height: 40px;
+                border-radius: b.$base-spacing;
                 font-family: b.$item-font;
-                color: b.$text-color;
                 background: b.$light-backdrop-color;
                 &:hover{
                     background: b.$text-color;
+            }
+        }
+            textarea{
+                border-radius: b.$base-spacing;
+                font-family: b.$item-font;
+                color: b.$text-color;
+                background: b.$light-backdrop-color;
+                width: 60%;
+                &:hover{
+                    background: b.$text-color;
                     color: b.$primary-color-dark;
+                
                 }
             }
         }
