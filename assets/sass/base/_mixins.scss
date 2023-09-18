@@ -60,3 +60,35 @@
 @mixin fuente {
     font-family: 'Roboto', sans-serif;
 }
+
+// agregando mixins para el body seccion de las imagenes
+
+@mixin image-styles {
+    position: relative;
+  }
+  
+  @mixin image-hover {
+    &:hover {
+      transform: scale(1.1); /* Agranda la imagen en un 10% */
+      transition: transform 0.3s ease; /* Agrega una transición suave */
+    }
+  }
+  
+  @mixin text-styles {
+    display: none;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.7); /* Fondo semitransparente */
+    color: white;
+    padding: 5px;
+    text-align: center;
+  }
+  
+  @mixin text-hover {
+    &:hover {
+      display: block;
+    }
+  }
+  
