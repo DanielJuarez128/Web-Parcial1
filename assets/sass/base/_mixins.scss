@@ -1,4 +1,4 @@
-@use '../base/variables' as v;
+@use 'variables' as v;
 
 @mixin phone {
     @media (max-width: v.$device-phone) {
@@ -48,4 +48,12 @@
     width: 20rem;
     height: 15rem;
     margin: 1rem;
+}
+
+@mixin background {
+    background: url(../images/bg-pattern.png);
+}
+
+@mixin fuente {
+    font-family: 'Roboto', sans-serif;
 }

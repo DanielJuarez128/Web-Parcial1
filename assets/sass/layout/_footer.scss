@@ -1,13 +1,11 @@
-@use '../base/variables' as v;
-@use '../base/theme' as t;
-@use '../base/mixins' as m;
-
+//simplificar exportación
+@use '../base' as b;
 
 footer{
-    @include m.flexbox(center, center, row);
+    @include b.flexbox(center, center, row);
     padding: 1rem 0;
-    font-family: t.$item-font;
+    font-family: b.$item-font;
     font-size: 0.5rem;
-    background-color: t.$primary-color-dark;
-    color: t.$text-color;
+    background-color: b.$primary-color-dark;
+    color: b.$text-color;
 }

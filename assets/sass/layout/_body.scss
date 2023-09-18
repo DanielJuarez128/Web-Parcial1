@@ -1,13 +1,12 @@
-@use '../base/variables' as v;
-@use '../base/theme' as t;
-@use '../base/mixins' as m;
+//simplificar exportación
+@use '../base' as b;
 
  /*Seccion 1, cartas de item*/
  #what-can-you-see {
-    font-family: t.$item-font; 
-    line-height: t.$base-spacing;
-    background-color: t.$primary-color;
-    color: t.$primary-color;
+    font-family: b.$item-font; 
+    line-height: b.$base-spacing;
+    background-color: b.$primary-color;
+    color: b.$primary-color;
     max-width: 180rem;
     margin: 0 auto;
     text-align: center;
@@ -22,10 +21,10 @@
     }
     .cards-container{
         margin-top: 5rem;
-        background-color: t.$primary-color;
+        background-color: b.$primary-color;
         article{
-            @include m.cartas_sec1;
-            background-color: t.$primary-color-dark;
+            @include b.cartas_sec1;
+            background-color: b.$primary-color-dark;
             border-radius: 0.5rem;
             display:inline-flex ;
             width: 25rem;
@@ -49,7 +48,7 @@
             }
         }
         article:hover{
-            background-color: t.$text-color;
+            background-color: b.$text-color;
             border-radius: 0rem 0.5rem;
             
             img{
@@ -66,9 +65,9 @@
                 width: 100%;
                 align-items: start;
                 h4{
-                    color: t.$primary-color-dark;
+                    color: b.$primary-color-dark;
                     text-align: center;
-                    font-size: t.$font-size;
+                    font-size: b.$font-size;
                     visibility: visible;
                     display: block;
                     position: relative;
@@ -77,9 +76,9 @@
                 p{ 
                     text-align: start;
                     margin-top: 2rem;
-                    color: t.$primary-color-dark;
+                    color: b.$primary-color-dark;
                     text-align: justify;
-                    font-size: t.$font-size;
+                    font-size: b.$font-size;
                     visibility: visible;
                     width: 100%;
                     display: inline;
