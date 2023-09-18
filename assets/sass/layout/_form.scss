@@ -8,8 +8,9 @@
     width: 100%;
     h3{
         
-        
+        color  : whitesmoke;
         font-family: b.$mono-font;
+        
     }
     form{
         
@@ -23,6 +24,7 @@ background-color: #182634;
             padding: b.$base-spacing*0.5;
             label{
                 font-family: b.$item-font;
+                color:whitesmoke;
             }
             input{
                 font-family: b.$item-font;
