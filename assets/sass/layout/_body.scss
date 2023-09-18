@@ -1,6 +1,7 @@
 //simplificar exportación
 @use '../base' as b;
 
+
  /*Seccion 1, cartas de item*/
  #what-can-you-see {
     font-family: b.$item-font; 
@@ -113,3 +114,37 @@
         }        
     }
 }
+//parte daniel 
+.cards-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px; /* Espacio entre las imágenes */
+  }
+  
+  .article {
+    position: relative;
+  }
+  
+  /* Estilos para la imagen al pasar el cursor */
+  .article:hover img {
+    transform: scale(1.1); /* Agranda la imagen en un 10% */
+    transition: transform 0.3s ease; /* Agrega una transición suave */
+  }
+  
+  /* Estilos para el texto debajo de la imagen */
+  .article span {
+    display: none;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.7); /* Fondo semitransparente */
+    color: white;
+    padding: 5px;
+    text-align: center;
+  }
+  
+  /* Mostrar el texto al pasar el cursor sobre la imagen */
+  .article:hover span {
+    display: block;
+  }

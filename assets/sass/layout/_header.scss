@@ -4,7 +4,7 @@
 header {
     @include b.background();
     width: 100%;
-    min-height: 1000 px;
+    height: 100vh;
     display: flex;
     flex-direction: column;
     gap: 25px;
