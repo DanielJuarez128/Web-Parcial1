@@ -80,6 +80,7 @@ section {
         align-items: center;
         justify-content: center;
         flex-wrap: wrap;
+        margin-top: 90px;
 
         h2 {
             @include b.fuente();

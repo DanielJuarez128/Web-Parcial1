@@ -1,14 +1,22 @@
 @use "../base"  as b;
 
 #contact-us{
+    @include b.lbackground();
+    
+
     @include b.flexbox($direction: column, $gap: b.$base-spacing);
-    max-width: 75vh;
+    width: 100%;
     h3{
+        
+        
         font-family: b.$mono-font;
     }
     form{
-        background: b.$primary-color;
-        width: 50vh;
+        
+       
+background-color: #182634;
+        
+        width: 50%;
         border-radius: b.$base-spacing;
         div{
             @include b.flexbox($direction: column, $gap: b.$base-spacing);
@@ -22,15 +30,30 @@
                 &:hover{
                     background: b.$text-color;
                 }
+                
             }
-            bottom{
+            textarea{
                 font-family: b.$item-font;
                 background: b.$light-backdrop-color;
-                border-radius: b.$base-spacing;
                 &:hover{
                     background: b.$text-color;
-                }
+
+  
+
             }
         }
+    }
+    button{
+
+        font-family: b.$item-font;
+        background: b.$light-backdrop-color;
+        border-radius: b.$base-spacing;
+        margin-left: 93%;
+
+        &:hover{
+            background: b.$text-color;
+        }
+    }
+
     }
 }

@@ -12,7 +12,7 @@
     margin: 0 auto;
     text-align: center;
     h3{
-        margin-top: 5rem;
+        
         font-weight: 300;
         text-align: center;
         color: b.$text-color;
@@ -117,7 +117,6 @@
 
 //llamando a los mixins para el body seccion imagenes
 
-@import 'assets/sass/base/mixins';
 
 .cards-container {
   display: grid;
@@ -126,11 +125,11 @@
 }
 
 .article {
-  @include image-styles;
-  @include image-hover;
+  @include b.image-styles;
+  @include b.image-hover;
 }
 
 .article span {
-  @include text-styles;
-  @include text-hover;
+  @include b.text-styles;
+  @include b.text-hover;
 }

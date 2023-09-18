@@ -14,7 +14,7 @@
 }
 
 @mixin desktop {
-    @media (min-width: v.$device-desktop) {
+    @media (min-width: v.$device-laptop) {
         @content;
     }
 }
@@ -55,8 +55,12 @@
 
 @mixin background {
     background: url(../images/bg-pattern.png);
+
 }
 
+@mixin lbackground{
+    background: url(../images/main-pattern.png);
+}
 @mixin fuente {
     font-family: 'Roboto', sans-serif;
 }
