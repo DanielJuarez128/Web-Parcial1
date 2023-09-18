@@ -2,21 +2,17 @@
 
 #contact-us{
     @include b.lbackground();
-    
-
     @include b.flexbox($direction: column, $gap: b.$base-spacing);
     width: 100%;
     h3{
         
-        color  : whitesmoke;
+        color: b.$text-color;
         font-family: b.$mono-font;
         
     }
-    form{
-        
-       
-background-color: #182634;
-        
+    form{   
+        background-color: b.$primary-color-dark;
+
         width: 50%;
         border-radius: b.$base-spacing;
         div{
@@ -24,38 +20,30 @@ background-color: #182634;
             padding: b.$base-spacing*0.5;
             label{
                 font-family: b.$item-font;
-                color:whitesmoke;
-            }
-            input{
-                font-family: b.$item-font;
-                background: b.$light-backdrop-color;
-                &:hover{
-                    background: b.$text-color;
-                }
-                
+                color: b.$text-color;
             }
             textarea{
                 font-family: b.$item-font;
+                color: b.$text-color;
                 background: b.$light-backdrop-color;
                 &:hover{
                     background: b.$text-color;
-
-  
-
+                    color: b.$primary-color-dark;
+                }
             }
         }
-    }
-    button{
-
-        font-family: b.$item-font;
-        background: b.$light-backdrop-color;
-        border-radius: b.$base-spacing;
-        margin-left: 93%;
-
-        &:hover{
-            background: b.$text-color;
+        button{
+            flex: 1 0 100px;
+            font-family: b.$item-font;
+            background: b.$light-backdrop-color;
+            border-radius: b.$base-spacing;
+            margin-left: 93%;
+            color: b.$text-color;
+            &:hover{
+                background: b.$text-color;
+                color: b.$primary-color-dark;
+            }
         }
-    }
 
     }
 }
