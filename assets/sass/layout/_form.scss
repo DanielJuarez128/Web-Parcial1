@@ -17,33 +17,33 @@
     form{   
         background-color: b.$primary-color-dark;
 
-
         width: 50%;
         border-radius: b.$base-spacing;
         div{
-            @include b.flexbox($direction: column, $gap: b.$base-spacing);
-            padding: b.$base-spacing*0.5;
+            @include b.flexbox($justify: right, $align: right ,$direction: column, $gap: b.$base-spacing);
+            height: auto;
+            padding: b.$base-spacing;
             label{
                 font-family: b.$item-font;
                 color: b.$text-color;
-                
+                margin-right: 50%;
             }
             input{
-                width: 60%;
+                width: auto;
                 height: 40px;
                 border-radius: b.$base-spacing;
                 font-family: b.$item-font;
                 background: b.$light-backdrop-color;
                 &:hover{
                     background: b.$text-color;
+                }
             }
-        }
             textarea{
                 border-radius: b.$base-spacing;
                 font-family: b.$item-font;
                 color: b.$text-color;
                 background: b.$light-backdrop-color;
-                width: 60%;
+                width: auto;
                 &:hover{
                     background: b.$text-color;
                     color: b.$primary-color-dark;
@@ -56,7 +56,7 @@
             font-family: b.$item-font;
             background: b.$light-backdrop-color;
             border-radius: b.$base-spacing;
-            margin-left: 90%;
+            margin-left: 85%;
             color: b.$text-color;
             height: 40px;
             width: 70px;
