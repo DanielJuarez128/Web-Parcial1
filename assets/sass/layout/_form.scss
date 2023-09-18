@@ -1,0 +1,27 @@
+@use "../base"  as b;
+
+#contact-us{
+    @include b.flexbox($direction: column, $gap: b.$base-spacing);
+    max-width: 50vh;
+
+    h3{
+        font-family: b.$mono-font;
+    }
+
+    form{
+        background: b.$primary-color;
+        width: 45vh;
+        border-radius: b.$base-spacing;
+        div{
+            @include b.flexbox($direction: column, $gap: b.$base-spacing);
+            padding: b.$base-spacing*0.5;
+
+            label{
+                font-family: b.$item-font;
+            }
+            input{
+                font-family: b.$item-font;
+            }
+        }
+    }
+}
