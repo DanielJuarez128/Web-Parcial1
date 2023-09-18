@@ -25,11 +25,7 @@
     }
 }
 
-@mixin maxDesktop {
-    @media (max-width: v.$device-maxDesktop) {
-        @content;
-    }
-}
+
 
 @mixin grid($columns, $spacing) {
     display: grid;

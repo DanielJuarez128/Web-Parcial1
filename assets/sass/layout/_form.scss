@@ -37,8 +37,10 @@
             font-family: b.$item-font;
             background: b.$light-backdrop-color;
             border-radius: b.$base-spacing;
-            margin-left: 93%;
+            margin-left: 90%;
             color: b.$text-color;
+            height: 30px;
+            width: 70px;
             &:hover{
                 background: b.$text-color;
                 color: b.$primary-color-dark;
