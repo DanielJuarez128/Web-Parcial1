@@ -115,25 +115,61 @@
     }
 }
 
-.photo-set figure {
+/* Estilos para la sección de fotos */
+#photos-showcase {
+    font-family: 'Caveat', b.$mono-font; /* Cambia a la fuente de tu elección */
+    color: blue($color: #ffffff); /* Cambia al color de texto deseado */
+    max-width: 180rem;
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+  #photos-showcase h3 {
+    margin-bottom: 5rem;
+    margin-top: 5rem;
+    font-weight: 300;
+    text-align: center;
+    color: white; /* Cambia al color de texto deseado */
+    font-size: 48px;
+    font-family: 'Montserrat', sans-serif; /* Cambia a la fuente de tu elección */
+  }
+  
+  .photo-set {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px; /* Espacio entre las imágenes */
+    width: 75%;
+    margin: 0 auto; /* Centra horizontalmente el elemento */
+    text-align: center; /* Centra el contenido dentro del elemento */
+  }
+  
+  .photo-set figure {
+    text-align: start;
     overflow: hidden;
     position: relative;
     width: 100%;
     height: 0;
     padding-bottom: 100%;
-    transition: transform 0.3s; /* Agregamos una transición suave para el efecto de zoom */
+    transition: transform 0.3s ease; /* Agregamos una transición para la animación */
   }
   
-  .photo-set figure img {
-    width: 100%;
-    height: auto;
+  .photo-set figure:hover {
+    transform: scale(1.1); /* Aumenta el tamaño al 110% al pasar el cursor */
+  }
+  
+  .photo-set span {
+    display: none;
     position: absolute;
-    top: 0;
+    bottom: 0;
     left: 0;
-    transform: scale(1); /* Escala original de la imagen */
+    right: 0;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.7); /* Fondo semitransparente */
+    color: white;
+    font-size: 16px;
   }
   
-  .photo-set figure:hover img {
-    transform: scale(1.2); /* Escala aumentada al pasar el cursor */
+  .photo-set figure:hover span {
+    display: block; /* Muestra el texto al pasar el cursor */
   }
   
