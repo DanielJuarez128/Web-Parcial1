@@ -2,32 +2,35 @@
 
 #contact-us{
     @include b.flexbox($direction: column, $gap: b.$base-spacing);
-    max-width: 50vh;
-
+    max-width: 75vh;
     h3{
         font-family: b.$mono-font;
     }
-
     form{
         background: b.$primary-color;
-        width: 45vh;
+        width: 50vh;
         border-radius: b.$base-spacing;
         div{
             @include b.flexbox($direction: column, $gap: b.$base-spacing);
             padding: b.$base-spacing*0.5;
-
             label{
                 font-family: b.$item-font;
             }
             input{
                 font-family: b.$item-font;
+                background: b.$light-backdrop-color;
+                &:hover{
+                    background: b.$text-color;
+                }
+            }
+            bottom{
+                font-family: b.$item-font;
+                background: b.$light-backdrop-color;
+                border-radius: b.$base-spacing;
+                &:hover{
+                    background: b.$text-color;
+                }
             }
         }
     }
-
-    @include b.phone;
-    @include b.tablet;
-    @include b.desktop;
-    @include b.maxTablet;
-    @include b.maxDesktop;
 }

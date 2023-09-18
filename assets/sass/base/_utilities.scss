@@ -14,6 +14,12 @@
 
     font-family: t.$text-font;
     font-weight: 300;
+
+    @include b.phone;
+    @include b.tablet;
+    @include b.desktop;
+    @include b.maxTablet;
+    @include b.maxDesktop;
 }
 
 body{
