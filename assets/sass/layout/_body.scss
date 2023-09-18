@@ -123,29 +123,31 @@
   
   .article {
     position: relative;
+    transition: transform 0.3s ease; /* Efecto de agrandamiento */
   }
   
-  /* Estilos para la imagen al pasar el cursor */
-  .article:hover img {
-    transform: scale(1.1); /* Agranda la imagen en un 10% */
-    transition: transform 0.3s ease; /* Agrega una transición suave */
+  .article:hover {
+    transform: scale(1.1); /* Agrandar la imagen al pasar el cursor */
   }
   
-  /* Estilos para el texto debajo de la imagen */
-  .article span {
+  .info {
     display: none;
     position: absolute;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #fff;
     bottom: 0;
     left: 0;
-    right: 0;
-    background-color: rgba(0, 0, 0, 0.7); /* Fondo semitransparente */
-    color: white;
+    width: 100%;
     padding: 5px;
-    text-align: center;
+    transition: opacity 0.3s ease; /* Transición para mostrar/ocultar el texto */
   }
   
-  /* Mostrar el texto al pasar el cursor sobre la imagen */
-  .article:hover span {
+  .article:hover .info {
     display: block;
   }
-
+  
+  .info p {
+    margin: 0;
+    font-size: 14px;
+  }
+  
