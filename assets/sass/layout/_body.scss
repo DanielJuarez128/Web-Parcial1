@@ -115,38 +115,22 @@
     }
 }
 
+//llamando a los mixins para el body seccion imagenes
+
+@import 'assets/sass/base/mixins';
+
 .cards-container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 0; /* Elimina el espacio entre las imágenes */
-  }
-  
-  .article {
-    position: relative;
-    transition: transform 0.3s ease; /* Efecto de agrandamiento */
-  }
-  
-  .article:hover {
-    transform: scale(1.1); /* Agrandar la imagen al pasar el cursor */
-  }
-  
-  .info {
-    display: none;
-    position: absolute;
-    background-color: rgba(0, 0, 0, 0.7);
-    color: #a5a5a5;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    padding: 5px;
-    transition: opacity 0.3s ease; /* Transición para mostrar/ocultar el texto */
-  }
-  
-  .article:hover .info {
-    display: block;
-  }
-  
-  .info p {
-    margin: 0;
-    font-size: 14px;
-  }
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0px; /* para que las imagenes esten juntas esapcio 0 */
+}
+
+.article {
+  @include image-styles;
+  @include image-hover;
+}
+
+.article span {
+  @include text-styles;
+  @include text-hover;
+}
