@@ -24,4 +24,10 @@
             }
         }
     }
+
+    @include b.phone;
+    @include b.tablet;
+    @include b.desktop;
+    @include b.maxTablet;
+    @include b.maxDesktop;
 }
